@@ -8,8 +8,8 @@
 </head>
 <body>
   <!-- Initial Calculator Screen -->
-  <div id="calculator-screen" class="screen">
-    <h1>Vacation Calculator</h1>
+  <div id="calculator-screen" class="screen active">
+    <h1>Vacation Cost Calculator</h1>
 
     <!-- Input: Nights per year -->
     <div class="input-group">
@@ -47,35 +47,38 @@
 
   <!-- Result Screen -->
   <div id="result-screen" class="screen hidden">
-    <h1>Vacation Calculator</h1>
+    <h1>Vacation Cost Results</h1>
 
     <!-- Summary Section -->
     <div class="summary">
-      <p><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></p>
-      <p><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></p>
-      <p><strong>Years planning to continue:</strong> <span id="summary-years">0</span></p>
-      <p><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></p>
+      <div class="summary-item"><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></div>
+      <div class="summary-item"><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></div>
+      <div class="summary-item"><strong>Years planning to continue:</strong> <span id="summary-years">0</span></div>
+      <div class="summary-item"><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></div>
     </div>
 
     <!-- Visual Comparison Section -->
     <div class="comparison-container">
       <!-- Hotel Room -->
       <div class="comparison-item">
-        <div class="red-circle" id="hotel-cost-circle">$0</div>
+        <div class="circle red">
+          <p>Total Hotel Cost:</p>
+          <p id="hotel-cost-circle">$0</p>
+        </div>
         <img src="hotel-room.png" alt="Hotel Room" class="comparison-image">
       </div>
 
       <!-- Vacation Ownership Condo -->
       <div class="comparison-item">
-        <div class="blue-circle">
-          <p>Vacation ownership</p>
-          <p>Offer spacious, condo-like accommodations</p>
+        <div class="circle blue">
+          <p>Vacation Ownership</p>
+          <p id="condo-description">Spacious, condo-like accommodations</p>
         </div>
         <img src="vacation-condo.png" alt="Vacation Condo" class="comparison-image">
       </div>
     </div>
 
-    <button onclick="goBack()">Back</button>
+    <button class="back-button" onclick="goBack()">Back</button>
   </div>
 
   <script src="script.js"></script>
