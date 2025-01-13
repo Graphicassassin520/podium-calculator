@@ -8,7 +8,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
 }
 
 .screen {
@@ -18,7 +17,7 @@ body {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -30,6 +29,66 @@ body {
   color: #333;
   margin: 0;
   text-align: center;
+}
+
+/* Input Section */
+.input-section {
+  width: 80%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.large-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Buttons */
+.button-section {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.8rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.calculate-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.calculate-button:hover {
+  background-color: #0056b3;
+}
+
+.reset-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #cc0000;
 }
 
 /* Total Cost Section */
@@ -62,21 +121,20 @@ body {
 }
 
 .summary p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Comparison Section */
 .comparison {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 40px;
 }
 
 .comparison-item {
   text-align: center;
-  width: 35%;
+  width: 40%;
 }
 
 .comparison-text {
