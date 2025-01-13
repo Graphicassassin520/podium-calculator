@@ -47,4 +47,3 @@ function goBack() {
   document.getElementById("result-screen").classList.remove("active");
   document.getElementById("calculator-screen").classList.add("active");
 }
-
