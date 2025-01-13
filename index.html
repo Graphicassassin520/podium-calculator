@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Cost Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>Vacation Cost Calculator</h1>
+
+    <!-- Input: Nights per year -->
+    <div class="input-group">
+      <label for="nights-per-year">How many nights per year do you stay in vacation accommodations?</label>
+      <input type="range" id="nights-per-year" min="0" max="50" value="0" oninput="updateValue('nights-value', this.value)">
+      <span id="nights-value">0</span>
+    </div>
+
+    <!-- Input: Cost per night -->
+    <div class="input-group">
+      <label for="cost-per-night">What is the average cost per night?</label>
+      <input type="range" id="cost-per-night" min="0" max="500" step="10" value="0" oninput="updateValue('cost-value', this.value)">
+      <span id="cost-value">$0</span>
+    </div>
+
+    <!-- Input: Years planning to vacation -->
+    <div class="input-group">
+      <label for="years-planning">How many years do you plan to vacation?</label>
+      <input type="range" id="years-planning" min="0" max="60" value="0" oninput="updateValue('years-value', this.value)">
+      <span id="years-value">0</span>
+    </div>
+
+    <!-- Input: Inflation rate -->
+    <div class="input-group">
+      <label for="inflation-rate">Inflation Rate (%)</label>
+      <input type="number" id="inflation-rate" value="0" step="0.01">
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button onclick="calculate()">Calculate</button>
+      <button onclick="reset()">Reset</button>
+    </div>
+
+    <!-- Visual Comparison Section -->
+    <div class="comparison-container">
+      <!-- Hotel Room -->
+      <div class="comparison-item">
+        <div class="red-circle" id="hotel-cost-circle">$0</div>
+        <img src="hotel-room.png" alt="Hotel Room" class="comparison-image">
+      </div>
+
+      <!-- Vacation Ownership Condo -->
+      <div class="comparison-item">
+        <div class="red-circle" id="condo-cost-circle">$0</div>
+        <img src="vacation-condo.png" alt="Vacation Ownership Condo" class="comparison-image">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
