@@ -1,4 +1,17 @@
-// Function to calculate and transition to results page
+// Transition between slides with fade effect
+function switchScreen(hideId, showId) {
+  const hideScreen = document.getElementById(hideId);
+  const showScreen = document.getElementById(showId);
+
+  hideScreen.classList.remove("active");
+  setTimeout(() => {
+    hideScreen.style.visibility = "hidden";
+    showScreen.style.visibility = "visible";
+    showScreen.classList.add("active");
+  }, 500);
+}
+
+// Calculate total cost and show results
 function calculate() {
   const nights = parseInt(document.getElementById("nights-per-year").value) || 0;
   const cost = parseInt(document.getElementById("cost-per-night").value) || 0;
@@ -8,19 +21,18 @@ function calculate() {
   let total = nights * cost * years;
   if (inflation > 0) total *= Math.pow(1 + inflation, years);
 
-  // Update results page
+  // Update results
   document.getElementById("summary-nights").innerText = nights;
   document.getElementById("summary-cost").innerText = formatNumber(cost);
   document.getElementById("summary-years").innerText = years;
   document.getElementById("summary-inflation").innerText = (inflation * 100).toFixed(2) + "%";
   document.getElementById("total-cost-value").innerText = `$${formatNumber(total.toFixed(2))}`;
 
-  // Transition to results page
-  document.getElementById("calculator-screen").classList.add("hidden");
-  document.getElementById("result-screen").classList.remove("hidden");
+  // Transition to results screen
+  switchScreen("calculator-screen", "result-screen");
 }
 
-// Reset all input values
+// Reset inputs
 function reset() {
   document.getElementById("nights-per-year").value = 0;
   document.getElementById("cost-per-night").value = 0;
@@ -33,8 +45,7 @@ function formatNumber(num) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// Function to go back to the input screen
+// Go back to input slide
 function goBack() {
-  document.getElementById("result-screen").classList.add("hidden");
-  document.getElementById("calculator-screen").classList.remove("hidden");
+  switchScreen("result-screen", "calculator-screen");
 }
