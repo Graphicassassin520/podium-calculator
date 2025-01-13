@@ -1,0 +1,110 @@
+/* styles.css */
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f9fc;
+}
+
+.calculator-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+span {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+button:last-child {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Comparison Section */
+.comparison-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.comparison-item {
+  text-align: center;
+}
+
+.red-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px auto;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.comparison-image {
+  width: 150px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
