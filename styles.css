@@ -11,16 +11,25 @@ body {
 }
 
 .screen {
+  position: absolute;
   width: 1920px;
   height: 1080px;
   background: white;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.screen.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Header Section */
@@ -91,100 +100,46 @@ button {
   background-color: #cc0000;
 }
 
-/* Total Cost Section */
-.total-cost-section {
-  text-align: center;
-  margin-top: 20px;
+/* Results Slide Sections */
+.total-cost-section, .summary, .comparison {
+  width: 90%;
+  margin: 20px auto;
 }
 
 .total-cost-label {
   font-size: 2.5rem;
   color: #666;
-  margin: 0;
 }
 
 #total-cost-value {
   font-size: 4.5rem;
   margin-top: 10px;
   color: #111;
-  font-weight: bold;
-}
-
-/* Summary Section */
-.summary {
-  width: 90%;
-  margin: 20px auto;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  color: #333;
-  text-align: left;
-}
-
-.summary p {
-  margin-bottom: 20px;
-}
-
-/* Comparison Section */
-.comparison {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.comparison-item {
-  text-align: center;
-  width: 40%;
-}
-
-.comparison-text {
-  width: 20%;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  margin: 0 auto;
 }
 
 .red-text {
   color: #ff4d4d;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
 }
 
 .blue-text {
   color: #007bff;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
 }
 
 .hotel-image {
   width: 350px;
-  height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .condo-image {
   width: 550px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Back Button */
 .back-button {
-  margin-top: 40px;
   padding: 20px 50px;
   font-size: 2rem;
   background-color: #333;
   color: white;
-  border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.back-button:hover {
-  background-color: #555;
 }
