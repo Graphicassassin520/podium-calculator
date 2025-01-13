@@ -3,107 +3,112 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
 }
 
 .screen {
   width: 1080px;
   height: 1920px;
   background: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Header Section */
 .header h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #333;
-  margin-bottom: 20px;
+  margin: 0;
+  text-align: center;
 }
 
 /* Total Cost Section */
 .total-cost-section {
   text-align: center;
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
-.total-cost-section p {
+.total-cost-label {
   font-size: 2rem;
   color: #666;
   margin: 0;
 }
 
-.total-cost-section h2 {
-  font-size: 4rem;
-  margin: 10px 0 0;
+#total-cost-value {
+  font-size: 5rem;
+  margin-top: 10px;
   color: #111;
+  font-weight: bold;
 }
 
 /* Summary Section */
 .summary {
+  width: 90%;
+  margin: 20px auto;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #333;
   text-align: left;
-  width: 80%;
-  margin: 0 auto;
-  font-size: 1.8rem;
-  line-height: 1.8;
 }
 
 .summary p {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Comparison Section */
 .comparison {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 40px;
 }
 
 .comparison-item {
   text-align: center;
-  width: 35%;
+  width: 40%;
 }
 
 .comparison-text {
-  text-align: center;
   width: 20%;
+  text-align: center;
   font-size: 2rem;
   font-weight: bold;
   color: #333;
+  margin: 0 auto;
 }
 
 .red-text {
   color: #ff4d4d;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .blue-text {
   color: #007bff;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .hotel-image {
   width: 300px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .condo-image {
   width: 450px;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -111,13 +116,14 @@ body {
 /* Back Button */
 .back-button {
   margin-top: 40px;
-  padding: 15px 30px;
-  font-size: 1.8rem;
+  padding: 20px 50px;
+  font-size: 2rem;
   background-color: #333;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .back-button:hover {
