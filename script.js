@@ -14,12 +14,9 @@ function calculate() {
   document.getElementById("summary-years").innerText = years;
   document.getElementById("summary-inflation").innerText = (inflation * 100).toFixed(2) + "%";
   document.getElementById("total-cost-value").innerText = `$${formatNumber(total.toFixed(2))}`;
-
-  // Transition to results page
-  switchScreen("calculator-screen", "result-screen");
 }
 
-// Function to reset all input values
+// Reset all input values
 function reset() {
   document.getElementById("nights-per-year").value = 0;
   document.getElementById("cost-per-night").value = 0;
@@ -32,20 +29,7 @@ function formatNumber(num) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// Transition between screens with fade effect
-function switchScreen(hideId, showId) {
-  const hideScreen = document.getElementById(hideId);
-  const showScreen = document.getElementById(showId);
-
-  hideScreen.classList.remove("active");
-  setTimeout(() => {
-    hideScreen.style.visibility = "hidden";
-    showScreen.style.visibility = "visible";
-    showScreen.classList.add("active");
-  }, 500);
-}
-
 // Function to go back to the input screen
 function goBack() {
-  switchScreen("result-screen", "calculator-screen");
+  window.history.back();
 }
