@@ -1,22 +1,26 @@
-/* styles.css */
-
-/* General Styles */
+/* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f3f4f6;
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f7f9fc;
 }
 
 .screen {
   display: none;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 95%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .screen.active {
@@ -24,23 +28,95 @@ body {
 }
 
 h1 {
-  text-align: center;
-  color: #333;
+  font-size: 2.2em;
+  color: #1f2937;
+  margin-bottom: 20px;
 }
 
-/* Summary Section */
+/* Input Section */
+.input-group {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  color: #4b5563;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  font-size: 16px;
+}
+
+span {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:first-child {
+  background-color: #2563eb;
+}
+
+button:first-child:hover {
+  background-color: #1e3a8a;
+}
+
+button:last-child {
+  background-color: #ef4444;
+}
+
+button:last-child:hover {
+  background-color: #991b1b;
+}
+
+/* Result Screen */
 .summary {
   text-align: left;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.summary p {
-  font-size: 16px;
-  margin: 5px 0;
+.summary-item {
+  font-size: 18px;
+  padding: 10px;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
-/* Comparison Section */
 .comparison-container {
   display: flex;
   justify-content: space-around;
@@ -50,36 +126,51 @@ h1 {
 
 .comparison-item {
   text-align: center;
+  width: 45%;
 }
 
-.red-circle,
-.blue-circle {
-  width: 120px;
-  height: 120px;
+.circle {
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 20px auto;
   font-size: 16px;
   font-weight: bold;
-}
-
-.red-circle {
-  background-color: red;
-}
-
-.blue-circle {
-  background-color: blue;
   text-align: center;
-  font-size: 12px;
-  line-height: 1.4;
-  padding: 5px;
+}
+
+.red {
+  background-color: #dc2626;
+  color: white;
+}
+
+.blue {
+  background-color: #2563eb;
+  color: white;
 }
 
 .comparison-image {
-  width: 150px;
-  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #4b5563;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #1f2937;
 }
