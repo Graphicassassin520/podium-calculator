@@ -52,17 +52,21 @@
     </div>
 
     <!-- Total Cost Section -->
-    <div class="total-cost-section">
-      <p class="total-cost-label">Total Cost</p>
-      <h2 id="total-cost-value">$0</h2>
+    <div class="total-cost-container">
+      <div class="total-cost">
+        <h3>Total Cost</h3>
+        <h1 id="total-cost-value">$0</h1>
+      </div>
     </div>
 
     <!-- Summary Section -->
-    <div class="summary">
-      <p><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></p>
-      <p><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></p>
-      <p><strong>Years planning to continue:</strong> <span id="summary-years">0</span></p>
-      <p><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></p>
+    <div class="summary-container">
+      <div class="summary">
+        <p><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></p>
+        <p><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></p>
+        <p><strong>Years planning to continue:</strong> <span id="summary-years">0</span></p>
+        <p><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></p>
+      </div>
     </div>
 
     <!-- Comparison Section -->
@@ -86,7 +90,9 @@
     </div>
 
     <!-- Back Button -->
-    <button class="back-button" onclick="goBack()">Back</button>
+    <div class="back-button-container">
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
