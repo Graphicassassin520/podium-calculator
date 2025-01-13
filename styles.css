@@ -8,11 +8,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .screen {
-  width: 1080px;
-  height: 1920px;
+  width: 1920px;
+  height: 1080px;
   background: white;
   border-radius: 8px;
   display: flex;
@@ -25,7 +26,7 @@ body {
 
 /* Header Section */
 .header h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: #333;
   margin: 0;
   text-align: center;
@@ -34,17 +35,17 @@ body {
 /* Total Cost Section */
 .total-cost-section {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .total-cost-label {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #666;
   margin: 0;
 }
 
 #total-cost-value {
-  font-size: 5rem;
+  font-size: 4.5rem;
   margin-top: 10px;
   color: #111;
   font-weight: bold;
@@ -61,13 +62,13 @@ body {
 }
 
 .summary p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Comparison Section */
 .comparison {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   margin-top: 40px;
@@ -75,13 +76,13 @@ body {
 
 .comparison-item {
   text-align: center;
-  width: 40%;
+  width: 35%;
 }
 
 .comparison-text {
   width: 20%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #333;
   margin: 0 auto;
@@ -100,14 +101,14 @@ body {
 }
 
 .hotel-image {
-  width: 300px;
+  width: 350px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .condo-image {
-  width: 450px;
+  width: 550px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
