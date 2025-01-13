@@ -115,42 +115,41 @@ button {
 .comparison-section {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
+  text-align: center;
 }
 
 .comparison-item {
   text-align: center;
-  width: 45%;
-}
-
-.circle {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin: 0 auto 15px;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.red {
-  background-color: #ff4d4d;
-  color: white;
-}
-
-.blue {
-  background-color: #007bff;
-  color: white;
 }
 
 .comparison-image {
-  width: 100%;
-  max-width: 200px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-image {
+  width: 150px;
+}
+
+.condo-image {
+  width: 450px; /* 3 times larger */
+}
+
+.comparison-text {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #333;
+}
+
+.vacation-ownership-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
 }
 
 .back-button {
