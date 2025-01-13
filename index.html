@@ -9,48 +9,49 @@
 <body>
   <!-- Results Page -->
   <div id="result-screen" class="screen active">
+    <!-- Header Section -->
     <div class="header">
       <h1>Vacation Calculator</h1>
     </div>
-    <div class="results-section">
-      <!-- Total Cost Section -->
-      <div class="total-cost-section">
-        <p>Total Cost</p>
-        <h2 id="total-cost-value">$0</h2>
+
+    <!-- Total Cost Section -->
+    <div class="total-cost-section">
+      <p class="total-cost-label">Total Cost</p>
+      <h2 id="total-cost-value">$0</h2>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="summary">
+      <p><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></p>
+      <p><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></p>
+      <p><strong>Years planning to continue:</strong> <span id="summary-years">0</span></p>
+      <p><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></p>
+    </div>
+
+    <!-- Comparison Section -->
+    <div class="comparison">
+      <!-- Hotel Section -->
+      <div class="comparison-item">
+        <h3 class="red-text">Hotel</h3>
+        <img src="hotel-room.png" alt="Hotel Room" class="hotel-image">
       </div>
 
-      <!-- Summary Section -->
-      <div class="summary">
-        <p><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></p>
-        <p><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></p>
-        <p><strong>Years planning to continue:</strong> <span id="summary-years">0</span></p>
-        <p><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></p>
+      <!-- Center Text -->
+      <div class="comparison-text">
+        <p>If the cost was the same, which would you choose?</p>
       </div>
 
-      <!-- Comparison Section -->
-      <div class="comparison">
-        <!-- Hotel Section -->
-        <div class="comparison-item">
-          <h3 class="red-text">Hotel</h3>
-          <img src="hotel-room.png" alt="Hotel Room" class="hotel-image">
-        </div>
-
-        <!-- Center Text -->
-        <div class="comparison-text">
-          <p>If the cost was the same, which would you choose?</p>
-        </div>
-
-        <!-- Vacation Ownership Section -->
-        <div class="comparison-item">
-          <h3 class="blue-text">Vacation Ownership</h3>
-          <img src="vacation-condo.png" alt="Vacation Condo" class="condo-image">
-        </div>
+      <!-- Vacation Ownership Section -->
+      <div class="comparison-item">
+        <h3 class="blue-text">Vacation Ownership</h3>
+        <img src="vacation-condo.png" alt="Vacation Condo" class="condo-image">
       </div>
     </div>
 
     <!-- Back Button -->
     <button class="back-button" onclick="goBack()">Back</button>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
