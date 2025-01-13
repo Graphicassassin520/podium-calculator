@@ -14,6 +14,10 @@ function calculate() {
   document.getElementById("summary-years").innerText = years;
   document.getElementById("summary-inflation").innerText = (inflation * 100).toFixed(2) + "%";
   document.getElementById("total-cost-value").innerText = `$${formatNumber(total.toFixed(2))}`;
+
+  // Transition to results page
+  document.getElementById("calculator-screen").classList.add("hidden");
+  document.getElementById("result-screen").classList.remove("hidden");
 }
 
 // Reset all input values
@@ -31,5 +35,6 @@ function formatNumber(num) {
 
 // Function to go back to the input screen
 function goBack() {
-  window.history.back();
+  document.getElementById("result-screen").classList.add("hidden");
+  document.getElementById("calculator-screen").classList.remove("hidden");
 }
