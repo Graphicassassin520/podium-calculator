@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .screen {
@@ -100,10 +101,9 @@ button {
   background-color: #cc0000;
 }
 
-/* Results Slide Sections */
-.total-cost-section, .summary, .comparison {
-  width: 90%;
-  margin: 20px auto;
+/* Results Slide */
+.total-cost-section {
+  text-align: center;
 }
 
 .total-cost-label {
@@ -113,7 +113,6 @@ button {
 
 #total-cost-value {
   font-size: 4.5rem;
-  margin-top: 10px;
   color: #111;
 }
 
