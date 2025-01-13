@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vacation Cost Calculator</title>
+  <title>Vacation Calculator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="calculator-container">
-    <h1>Vacation Cost Calculator</h1>
+  <!-- Initial Calculator Screen -->
+  <div id="calculator-screen" class="screen">
+    <h1>Vacation Calculator</h1>
 
     <!-- Input: Nights per year -->
     <div class="input-group">
@@ -42,6 +43,19 @@
       <button onclick="calculate()">Calculate</button>
       <button onclick="reset()">Reset</button>
     </div>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="screen hidden">
+    <h1>Vacation Calculator</h1>
+
+    <!-- Summary Section -->
+    <div class="summary">
+      <p><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></p>
+      <p><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></p>
+      <p><strong>Years planning to continue:</strong> <span id="summary-years">0</span></p>
+      <p><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></p>
+    </div>
 
     <!-- Visual Comparison Section -->
     <div class="comparison-container">
@@ -53,10 +67,15 @@
 
       <!-- Vacation Ownership Condo -->
       <div class="comparison-item">
-        <div class="red-circle" id="condo-cost-circle">$0</div>
-        <img src="vacation-condo.png" alt="Vacation Ownership Condo" class="comparison-image">
+        <div class="blue-circle">
+          <p>Vacation ownership</p>
+          <p>Offer spacious, condo-like accommodations</p>
+        </div>
+        <img src="vacation-condo.png" alt="Vacation Condo" class="comparison-image">
       </div>
     </div>
+
+    <button onclick="goBack()">Back</button>
   </div>
 
   <script src="script.js"></script>
