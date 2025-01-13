@@ -7,19 +7,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
 .screen {
-  position: absolute;
-  width: 1920px;
-  height: 1080px;
-  padding: 40px;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  max-height: 1080px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  padding: 20px;
   background: white;
   opacity: 0;
   visibility: hidden;
@@ -33,32 +34,33 @@ body {
 
 /* Header Section */
 .header h1 {
-  font-size: 4rem;
+  font-size: 4vw;
   color: #333;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Input Section */
 .input-section {
-  width: 80%;
+  width: 90%;
+  max-width: 800px;
 }
 
 .input-group {
   margin-bottom: 20px;
-  text-align: left;
 }
 
 label {
   display: block;
-  font-size: 2rem;
+  font-size: 1.8vw;
   margin-bottom: 10px;
   color: #333;
 }
 
 .large-input {
   width: 100%;
-  padding: 15px;
-  font-size: 1.8rem;
+  padding: 10px;
+  font-size: 1.5vw;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -72,8 +74,8 @@ label {
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 1.8rem;
+  padding: 10px 20px;
+  font-size: 1.5vw;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -99,20 +101,53 @@ button {
 }
 
 /* Results Slide */
-.total-cost-section {
+.total-cost-container {
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.total-cost-label {
-  font-size: 2.5rem;
+.total-cost h3 {
+  font-size: 2vw;
   color: #666;
 }
 
-#total-cost-value {
-  font-size: 4rem;
+.total-cost h1 {
+  font-size: 3.5vw;
   color: #111;
   font-weight: bold;
+}
+
+/* Summary Section */
+.summary-container {
+  text-align: left;
+  width: 90%;
+  max-width: 800px;
+}
+
+.summary p {
+  font-size: 1.5vw;
+  line-height: 2.2vw;
+}
+
+/* Comparison Section */
+.comparison {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.comparison-item {
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.comparison-text {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
 }
 
 .red-text {
@@ -123,45 +158,59 @@ button {
   color: #007bff;
 }
 
-.hotel-image {
-  width: 400px;
-  height: auto;
-  border-radius: 8px;
-}
-
+.hotel-image,
 .condo-image {
-  width: 600px;
-  height: auto;
-  border-radius: 8px;
-}
-
-.comparison {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   width: 100%;
-  margin-top: 30px;
-}
-
-.comparison-item {
-  text-align: center;
-  flex: 1;
-}
-
-.comparison-text {
-  width: 20%;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
+  max-width: 300px;
+  height: auto;
 }
 
 /* Back Button */
+.back-button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
 .back-button {
-  padding: 20px 50px;
-  font-size: 2rem;
+  padding: 10px 20px;
+  font-size: 1.5vw;
   background-color: #333;
   color: white;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 5vw;
+  }
+
+  .large-input {
+    font-size: 2vw;
+  }
+
+  button {
+    font-size: 2vw;
+  }
+
+  .total-cost h1 {
+    font-size: 4vw;
+  }
+
+  .summary p {
+    font-size: 2vw;
+  }
+
+  .comparison-item {
+    max-width: 100%;
+  }
+
+  .comparison-text {
+    font-size: 3vw;
+  }
 }
