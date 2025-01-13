@@ -1,81 +1,76 @@
-/* General Layout */
+/* General Styling */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: #f9f9f9;
 }
 
 .screen {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  background: white;
-  border-radius: 8px;
-  width: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
   max-width: 1200px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
 }
 
 .screen.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .header h1 {
-  font-size: 1.8rem;
-  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
   margin-bottom: 20px;
 }
 
 /* Input Section */
 .input-section {
   width: 100%;
+  margin: 20px 0;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 label {
   display: block;
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
   color: #333;
 }
 
-.slider-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-input[type="range"] {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
-span {
-  font-weight: bold;
-  font-size: 1rem;
+.large-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
 /* Buttons */
 .button-section {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  margin-top: 20px;
 }
 
 button {
-  width: 45%;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 6px;
+  width: 48%;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -99,66 +94,66 @@ button {
   background-color: #cc0000;
 }
 
-/* Result Screen */
-.result-summary {
-  width: 100%;
-  margin-bottom: 20px;
+/* Results Page */
+.summary {
+  text-align: left;
+  margin: 20px 0;
+  font-size: 1.5rem;
 }
 
-.summary-row {
-  display: flex;
-  justify-content: space-between;
+.summary p {
   margin-bottom: 10px;
-  font-size: 1rem;
 }
 
-.comparison-section {
+.comparison {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  text-align: center;
+  margin-top: 30px;
 }
 
 .comparison-item {
   text-align: center;
 }
 
-.comparison-image {
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.comparison-text {
+  width: 30%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.red-text {
+  color: #ff4d4d;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.blue-text {
+  color: #007bff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 .hotel-image {
   width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .condo-image {
-  width: 450px; /* 3 times larger */
-}
-
-.comparison-text {
-  width: 100%;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 20px 0;
-  color: #333;
-}
-
-.vacation-ownership-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #007bff;
-  margin-bottom: 15px;
+  width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .back-button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
   background-color: #333;
   color: white;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
 }
 
