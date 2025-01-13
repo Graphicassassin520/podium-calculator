@@ -1,10 +1,9 @@
-/* General Styling */
+/* General Layout */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f3f4f6;
-  color: #333;
+  background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,112 +14,107 @@ body {
   display: none;
   flex-direction: column;
   align-items: center;
+  background: white;
+  border-radius: 8px;
   width: 95%;
   max-width: 1200px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .screen.active {
   display: flex;
 }
 
-h1 {
-  font-size: 2.2em;
-  color: #1f2937;
+.header h1 {
+  font-size: 1.8rem;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 /* Input Section */
-.input-group {
-  margin-bottom: 25px;
+.input-section {
   width: 100%;
+}
+
+.input-group {
+  margin-bottom: 15px;
 }
 
 label {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
   display: block;
-  color: #4b5563;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 input[type="range"] {
-  width: 100%;
-}
-
-input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  background: #f9fafb;
-  font-size: 16px;
+  flex-grow: 1;
+  margin-right: 10px;
 }
 
 span {
-  font-size: 16px;
   font-weight: bold;
-  margin-top: 5px;
-  display: block;
+  font-size: 1rem;
 }
 
 /* Buttons */
-.buttons {
-  margin-top: 20px;
+.button-section {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
 button {
-  padding: 12px 24px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
+  width: 45%;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 
-button:first-child {
-  background-color: #2563eb;
+.calculate-button {
+  background-color: #007bff;
+  color: white;
 }
 
-button:first-child:hover {
-  background-color: #1e3a8a;
+.calculate-button:hover {
+  background-color: #0056b3;
 }
 
-button:last-child {
-  background-color: #ef4444;
+.reset-button {
+  background-color: #ff4d4d;
+  color: white;
 }
 
-button:last-child:hover {
-  background-color: #991b1b;
+.reset-button:hover {
+  background-color: #cc0000;
 }
 
 /* Result Screen */
-.summary {
-  text-align: left;
-  margin-bottom: 20px;
+.result-summary {
   width: 100%;
+  margin-bottom: 20px;
 }
 
-.summary-item {
-  font-size: 18px;
-  padding: 10px;
-  background: #f9fafb;
-  border-radius: 8px;
-  margin-bottom: 8px;
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-.comparison-container {
+.comparison-section {
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
   width: 100%;
 }
 
@@ -130,47 +124,45 @@ button:last-child:hover {
 }
 
 .circle {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 20px auto;
-  font-size: 16px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  font-size: 1rem;
   font-weight: bold;
-  text-align: center;
 }
 
 .red {
-  background-color: #dc2626;
+  background-color: #ff4d4d;
   color: white;
 }
 
 .blue {
-  background-color: #2563eb;
+  background-color: #007bff;
   color: white;
 }
 
 .comparison-image {
   width: 100%;
-  max-width: 250px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .back-button {
   margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 18px;
-  background-color: #4b5563;
+  padding: 10px 20px;
+  background-color: #333;
   color: white;
-  border: none;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
 .back-button:hover {
-  background-color: #1f2937;
+  background-color: #555;
 }
