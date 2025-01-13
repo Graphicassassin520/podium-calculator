@@ -7,74 +7,50 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Initial Calculator Screen -->
-  <div id="calculator-screen" class="screen active">
-    <div class="header">
-      <h1>Vacation Calculator</h1>
-    </div>
-    <div class="input-section">
-      <!-- Input: Nights per year -->
-      <div class="input-group">
-        <label for="nights-per-year">How many nights per year do you stay in vacation accommodations?</label>
-        <input type="number" id="nights-per-year" value="0" min="0" step="1" class="large-input">
-      </div>
-
-      <!-- Input: Cost per night -->
-      <div class="input-group">
-        <label for="cost-per-night">What is the average cost per night?</label>
-        <input type="number" id="cost-per-night" value="0" min="0" step="1" class="large-input">
-      </div>
-
-      <!-- Input: Years planning to vacation -->
-      <div class="input-group">
-        <label for="years-planning">How many years do you plan to vacation?</label>
-        <input type="number" id="years-planning" value="0" min="0" step="1" class="large-input">
-      </div>
-
-      <!-- Input: Inflation rate -->
-      <div class="input-group">
-        <label for="inflation-rate">Inflation Rate (%)</label>
-        <input type="number" id="inflation-rate" value="0" min="0" step="0.01" class="large-input">
-      </div>
-    </div>
-
-    <div class="button-section">
-      <button class="calculate-button" onclick="calculate()">Calculate</button>
-      <button class="reset-button" onclick="reset()">Reset</button>
-    </div>
-  </div>
-
   <!-- Results Page -->
-  <div id="result-screen" class="screen hidden">
+  <div id="result-screen" class="screen active">
     <div class="header">
       <h1>Vacation Calculator</h1>
-      <div class="total-cost">
+    </div>
+    <div class="results-section">
+      <!-- Total Cost Section -->
+      <div class="total-cost-section">
         <p>Total Cost</p>
         <h2 id="total-cost-value">$0</h2>
       </div>
-    </div>
-    <div class="summary">
-      <p><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></p>
-      <p><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></p>
-      <p><strong>Years planning to continue:</strong> <span id="summary-years">0</span></p>
-      <p><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></p>
-    </div>
-    <div class="comparison">
-      <div class="comparison-item">
-        <h3 class="red-text">Hotel</h3>
-        <img src="hotel-room.png" alt="Hotel Room" class="hotel-image">
+
+      <!-- Summary Section -->
+      <div class="summary">
+        <p><strong>Nights per year in a hotel:</strong> <span id="summary-nights">0</span></p>
+        <p><strong>Average cost per night:</strong> $<span id="summary-cost">0</span></p>
+        <p><strong>Years planning to continue:</strong> <span id="summary-years">0</span></p>
+        <p><strong>Inflation rate:</strong> <span id="summary-inflation">0.00%</span></p>
       </div>
-      <div class="comparison-text">
-        <p>If the cost was the same, which would you choose?</p>
-      </div>
-      <div class="comparison-item">
-        <h3 class="blue-text">Vacation Ownership</h3>
-        <img src="vacation-condo.png" alt="Vacation Condo" class="condo-image">
+
+      <!-- Comparison Section -->
+      <div class="comparison">
+        <!-- Hotel Section -->
+        <div class="comparison-item">
+          <h3 class="red-text">Hotel</h3>
+          <img src="hotel-room.png" alt="Hotel Room" class="hotel-image">
+        </div>
+
+        <!-- Center Text -->
+        <div class="comparison-text">
+          <p>If the cost was the same, which would you choose?</p>
+        </div>
+
+        <!-- Vacation Ownership Section -->
+        <div class="comparison-item">
+          <h3 class="blue-text">Vacation Ownership</h3>
+          <img src="vacation-condo.png" alt="Vacation Condo" class="condo-image">
+        </div>
       </div>
     </div>
+
+    <!-- Back Button -->
     <button class="back-button" onclick="goBack()">Back</button>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
